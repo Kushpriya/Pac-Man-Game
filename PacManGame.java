@@ -69,12 +69,12 @@ public class PacManGame extends JPanel implements ActionListener {
 
 
     private void loadImages() {
-        down = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game/down.gif").getImage();
-        up = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game/up.gif").getImage();
-        left = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game/left.gif").getImage();
-        right = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game/right.gif").getImage();
-        ghost = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game/ghost.gif").getImage();
-        heart = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game/heart.png").getImage();
+        down = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game images/down.gif").getImage();
+        up = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game images/up.gif").getImage();
+        left = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game images/left.gif").getImage();
+        right = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game images/right.gif").getImage();
+        ghost = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game images/ghost.gif").getImage();
+        heart = new ImageIcon("C:/Users/priya/OneDrive/Documents/Desktop/Pacman Game images/heart.png").getImage();
 
     }
     private void initVariables() {
@@ -246,7 +246,9 @@ public class PacManGame extends JPanel implements ActionListener {
         }
     }
 
-    private void drawGhost(Graphics2D g2d, int x, int y) {
+    private void drawGhost(Graphics2D g2d, int x, int y)
+    {
+
         g2d.drawImage(ghost, x, y, this);
     }
 
@@ -264,7 +266,8 @@ public class PacManGame extends JPanel implements ActionListener {
                 score++;
             }
 
-            if (req_dx != 0 || req_dy != 0) {
+            if (req_dx != 0 || req_dy != 0)
+            {
                 if (!((req_dx == -1 && req_dy == 0 && (ch & 1) != 0)
                         || (req_dx == 1 && req_dy == 0 && (ch & 4) != 0)
                         || (req_dx == 0 && req_dy == -1 && (ch & 2) != 0)
@@ -348,7 +351,7 @@ public class PacManGame extends JPanel implements ActionListener {
         lives = 3;
         score = 0;
         initLevel();
-        N_GHOSTS = 6;
+        N_GHOSTS = 7;
         currentSpeed = 3;
     }
 
